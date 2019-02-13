@@ -2,28 +2,26 @@
 <html>
   <head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Colmar Academy</title>
-  <meta name="author" content="Angela Boakes">
-  <meta name="description" content="Colmar Academy. Learn something new everyday">
-  <meta name="keywords" content="Colmar Academy, learning, education, courses, thesis">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="./resources/css/reset.css" type="text/css">
-  <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <meta name="author" content="Angela Boakes">
+    <meta name="description" content="Colmar Academy. Learn something new everyday">
+    <meta name="keywords" content="Colmar Academy, learning, education, courses, thesis">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
   </head>
   <body>
-
-  	<!-- Fixed Header -->
-	  <header class="main-container">
-  		<div class="r">
-  		   <img src="insert logo here">
+  	<!-- Header -->
+	  <header class="main-container flex header">
+  		<div class="flex">
+  		   <img id="logo" src="./resources/images/ic-logo.svg" alt="Colmar Academy Logo">
   		   <div>
-  		     <h1>Colmar Academy</h1>
+  		     <span>COLMARACADEMY</span>
   		   </div>
   		</div>
-
   		<!-- Nav Bar -->
-  		<nav>
+  		<nav class="flex">
   		 <!-- menu items for desktop -->
   		  <ul class="menu-main">
   		     <li><a href=#>On Campus</a></li>
@@ -33,23 +31,38 @@
   		  </ul>
         <!-- favicon menu bar for mobiles -->
   		  <ul class="menu-mobile">
-
+          <li><a href=#><img src="./resources/images/ic-on-campus.svg"></a></li>
+          <li><a href=#><img src="./resources/images/ic-online.svg"></a></li>
+          <li><a href=#><img src="./resources/images/ic-login.svg"></a></li>
   		  </ul>
   		</nav>
   	</header>
 
   	<!-- Learn something new content -->
-  	<div class="main-container learn">
-
+  	<div class="main-container flex learn">
+      <div class="large-image">
+        <img src="./resources/images/banner.jpg" alt="People studying">
+      </div>
+      <div class="flex text">
+        <div>
+          <h2>Learn something new everyday</h2>
+        </div>
+        <div>
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+        </div>
+        <div class="button">
+          <h4>Start here</h4>
+        </div>
+      </div>
   	</div>
 
   	<!-- Practice content -->
-  	<div class="main-container practice">
+  	<div class="main-container" id="practice">
 
   	</div>
 
   	<!-- courses content -->
-  	<div class="main-container courses">
+  	<div class="main-container" id="courses">
 
   	</div>
 
