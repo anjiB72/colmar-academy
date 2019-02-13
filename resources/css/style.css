@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
   }
 
 .main-container {
@@ -14,6 +15,24 @@ body {
 
 .flex {
   display: flex;
+}
+
+.text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
 }
 
 /* Header */
@@ -41,30 +60,50 @@ nav a{
 .learn{
   flex-direction: row;
   justify-content: flex-start;
-}
+  }
 
 .large-image{
   width: 60%;
+  height: auto;
   margin: 2rem 1.5rem;
 }
 
-.learn img{
+.large-image img{
   width: 100%;
-  align-self: flex-start;
 }
 
-.text {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+.learn .text {
+    width: 40%;
+    padding-right: 3.5rem;
 }
+    .learn h1,
+    .learn h2 {
+      margin-bottom: 1.5rem;
+    }
 
 .button{
   border: 1px solid black;
-  padding: 0.5rem 6rem;
-    }
+  padding: 0.5rem 8rem;
+}
     .button h4{
       text-align: center;
       margin: 0;
       padding: 0;
     }
+
+/* Practice content */
+  .practice {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+.practice .text {
+  width: 100%;
+  padding-right: 1rem;
+  }
+
+.practice-col2{
+  width: 40%;
+  border-left: 0.5px solid lightgrey;
+  padding-left: 1rem;
+}
