@@ -9,7 +9,7 @@ body {
 
 .main-container {
   border: 1px solid black;
-  width: 960px;
+  width: 100%;
   margin: 0 auto 0 auto;
 }
 
@@ -37,27 +37,89 @@ h2{
 
 /* Header */
 .header {
- height: 4rem;
- flex-direction: row;
- justify-content: space-between;
- align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(60, 110, 113, 1);
+  height: 4rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#logo{
-  height: 3rem;
-  margin: auto 0 auto 1.5rem;
+#logo {
+  align-items: center;
+  margin: 0 0 0 1.5rem;
 }
-nav ul li {
+
+#logo img{
+  height: 3rem;
+  margin: 0 0.25rem 0 0 ;
+}
+
+#logo h1{
+  margin: 0;
+  font-family: "Noto", serif;
+  font-weigh: 700;
+  font-size: 2rem;
+  color: rgba(63, 64, 63, 1);
+}
+
+.header h1::after {
+  content: "ACADEMY";
+  font-family: "Noto", serif;
+  color: rgba(226, 192, 68, 1);
+  font-size: 2rem;
+}
+/*Nav Bar*/
+  nav {
+    flex-direction: row;
+
+    margin: auto 1.5rem auto 0;
+  }
+
+nav ul li{
   display: inline;
   text-decoration: none;
 }
 
-nav a{
-  text-decoration: none;
-}
+  nav a{
+    text-decoration: none;
+    color: rgba(246, 246, 246, 1);
+    padding-left: 1rem;
+  }
+
+
+  /*Media queries for nav bar display*/
+
+  @media only screen and (min-width: 900px){
+    .menu-mobile{
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 899px){
+    .menu-main{
+      display: none;
+    }
+    .header h1{
+      display: none;
+    }
+    nav{
+      width: 65%;
+    }
+    .menu-mobile{
+      width: 100%;
+      justify-content: space-between;
+    }
+    .menu-mobile span{
+      align-self: center;
+    }
+  }
 
 /*learn something new content*/
 .learn{
+  margin-top: 4rem;
   flex-direction: row;
   justify-content: flex-start;
   }
