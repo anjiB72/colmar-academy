@@ -24,15 +24,27 @@ body {
   }
 
     h1 {
-      font-size: 2.25rem;
-      line-height: 1.2;
+      font-size: 2.5rem;
+      line-height: 1.4;
       font-weight: 700;
     }
 
     h2{
-      font-size: 1.5rem;
-      line-height: 1.2;
+      font-size: 2rem;
+      line-height: 1.3;
       font-weight: 500;
+    }
+
+    h3{
+      font-size: 1.6rem;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    h4{
+      font-size: 1.25rem;
+      line-height: 1.2;
+      font-weight: 600;
     }
 
     P{
@@ -134,7 +146,7 @@ body {
     width: 60%;
     margin: 2rem 1.5rem;
   }
-    .large-image img{
+    .large-image img {
       width: 100%;
     }
 
@@ -168,22 +180,21 @@ body {
     flex-direction: row;
     justify-content: flex-start;
   }
-
-  .practice .text {
-    width: 100%;
-    padding-right: 1rem;
-    }
-    .practice .text h1{
-      margin: 2rem 0 0 0;
-      text-align: left;
-    }
-    .practice .text p {
-      margin-top: 1.5rem;
-    }
-    .practice .text p:last-child{
-      font-style: italic;
-      font-size: 0.75rem;
-    }
+    .practice .text {
+      width: 100%;
+      padding-right: 1rem;
+      }
+      .practice .text h1{
+        margin: 2rem 0 0 0;
+        text-align: left;
+      }
+      .practice .text p {
+        margin-top: 1.5rem;
+      }
+      .practice .text p:last-child{
+        font-style: italic;
+        font-size: 0.75rem;
+      }
 
   .practice-col2{
     margin: 1rem 0 2rem 0;
@@ -202,21 +213,43 @@ body {
       .guest{
         background-color: rgba(210, 204, 161, 0.4);
       }
-        .full-display {
+      .full-display {
         width: 35%;
       }
       .info-text {
-        width: 65%;
+        width: 55%;
         margin: 1rem;
       }
+        .info-text h4,
+        .info-text p {
+          padding-bottom: 1rem;
+          padding-right: 1rem;
+        }
+        .info-text p:last-child{
+          font-style: italic;
+        }
 
-  /*MEDIA QUERIES FOR PRACTICE CONTENT*/
-
-  @media only screen and (min-width: 900px){
-    .mobile-display {
-      display: none;
-    }
-  }
+      /*MEDIA QUERIES FOR PRACTICE CONTENT*/
+      @media only screen and (min-width: 900px){
+        .mobile-display {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 899px){
+        #practice-col-1 {
+          display: none;
+        }
+        .full-display {
+          display: none;
+        }
+        .orientation, .campus, .guest {
+          width: 100%;
+          flex-direction: column;
+        }
+        .guest{
+          background-color: transparent;
+        }
+      }
 
 /*FOOTER*/
   .footer {
@@ -231,6 +264,7 @@ body {
     .terms {
       margin: 1rem 1.5rem;
     }
-      .span-space {
+    .copyright span:first-child,
+    .terms span:first-child {
         padding-right: 0.5rem;
       }
