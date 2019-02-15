@@ -1,3 +1,4 @@
+/*MAIN STYLING*/
 html {
   font-size: 16px;
 }
@@ -7,34 +8,40 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   }
 
-.main-container {
-  width: 100%;
-  margin: 0;
-}
+  .main-container {
+    width: 100%;
+    margin: 0;
+  }
 
-.flex {
-  display: flex;
-}
+  .flex {
+    display: flex;
+  }
 
-.text {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
+  .text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
-h1 {
-  font-size: 2.25rem;
-  line-height: 1.2;
-  font-weight: 700;
-}
+    h1 {
+      font-size: 2.25rem;
+      line-height: 1.2;
+      font-weight: 700;
+    }
 
-h2{
-  font-size: 1.5rem;
-  line-height: 1.2;
-  font-weight: 500;
-}
+    h2{
+      font-size: 1.5rem;
+      line-height: 1.2;
+      font-weight: 500;
+    }
 
-/* Header */
+    P{
+      font-size: 0.9rem;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+/* HEADER */
 .header {
   border-bottom: 1px solid rgba(63, 64, 63, 1);
   position: fixed;
@@ -47,23 +54,21 @@ h2{
   align-items: center;
 }
 
-#logo {
-  align-items: center;
-  margin: 0 0 0 1.5rem;
-}
-
-#logo img{
-  height: 3rem;
-  margin: 0 0.25rem 0 0 ;
-}
-
-#logo h1{
-  margin: 0;
-  font-family: "Noto", serif;
-  font-weight: bold;
-  font-size: 2rem;
-  color: rgba(63, 64, 63, 1);
-}
+  #logo {
+    align-items: center;
+    margin: 0 0 0 1.5rem;
+  }
+    #logo img{
+      height: 3rem;
+      margin: 0 0.25rem 0 0 ;
+    }
+    #logo h1{
+      margin: 0;
+      font-family: "Noto", serif;
+      font-weight: bold;
+      font-size: 2rem;
+      color: rgba(63, 64, 63, 1);
+    }
 
 .header h1::after {
   content: "ACADEMY";
@@ -125,56 +130,93 @@ h2{
   justify-content: flex-start;
   }
 
-.large-image {
-  width: 60%;
-  margin: 2rem 1.5rem;
-}
-
-.large-image img{
-  width: 100%;
-}
-
-.learn .text {
-    width: 40%;
-    height: auto;
-    margin: 2rem 1.5rem 2rem 0;
+  .large-image {
+    width: 60%;
+    margin: 2rem 1.5rem;
   }
-    .learn h1,
-    .learn h2 {
-      margin-bottom: 1.5rem;
+    .large-image img{
+      width: 100%;
     }
 
-  .learn .text .button{
-      width: 75%;
-      background-color: rgba(63, 64, 63, 1);
-      padding: 0.5rem;
-      color: rgba(246, 246, 246, 1);
-      text-align: center;
-      text-decoration: none;
+  .learn .text {
+      width: 40%;
+      height: auto;
+      margin: 2rem 1.5rem 2rem 0;
     }
+      .learn h1,
+      .learn h2 {
+        margin-bottom: 1.5rem;
+      }
 
-  .learn .text .button:hover{
-      background-color: rgba(226, 192, 68, 1);
-      color: rgba(63, 64, 63, 1);
-      transition: color 250ms;
-    }
+    .learn .text .button{
+        width: 75%;
+        background-color: rgba(63, 64, 63, 1);
+        padding: 0.5rem;
+        color: rgba(246, 246, 246, 1);
+        text-align: center;
+        text-decoration: none;
+      }
+      /*CHANGE BUTTON & TEXT COLOUR WHEN HOVER*/
+      .learn .text .button:hover{
+          background-color: rgba(226, 192, 68, 1);
+          color: rgba(63, 64, 63, 1);
+          transition: color 250ms;
+        }
 
-    /* Practice content */
+/*PRACTICE CONTENT*/
   .practice {
     flex-direction: row;
     justify-content: flex-start;
   }
 
-.practice .text {
-  width: 100%;
-  padding-right: 1rem;
+  .practice .text {
+    width: 100%;
+    padding-right: 1rem;
+    }
+    .practice .text h1{
+      margin: 2rem 0 0 0;
+      text-align: left;
+    }
+    .practice .text p {
+      margin-top: 1.5rem;
+    }
+    .practice .text p:last-child{
+      font-style: italic;
+      font-size: 0.75rem;
+    }
+
+  .practice-col2{
+    margin: 1rem 0 2rem 0;
+    flex-direction: column;
+    width: 40%;
+    border-left: 0.5px solid rgba(63, 64, 63, 0.25);
   }
 
-.practice-col2{
-  width: 40%;
-  border-left: 0.5px solid lightgrey;
-  padding-left: 1rem;
-}
+      .orientation, .campus, .guest {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem;
+      }
+      .guest{
+        background-color: rgba(210, 204, 161, 0.4);
+      }
+        .full-display {
+        width: 35%;
+      }
+      .info-text {
+        width: 65%;
+        margin: 1rem;
+      }
+
+  /*MEDIA QUERIES FOR PRACTICE CONTENT*/
+
+  @media only screen and (min-width: 900px){
+    .mobile-display {
+      display: none;
+    }
+  }
 
 /*FOOTER*/
   .footer {
@@ -185,10 +227,10 @@ h2{
     color: rgba(246, 246, 246, 1);
   }
 
-  .copyright,
-  .terms{
-    margin: 1rem 1.5rem;
-  }
-    .span-space {
-      padding-right: 0.5rem;
+    .copyright,
+    .terms {
+      margin: 1rem 1.5rem;
     }
+      .span-space {
+        padding-right: 0.5rem;
+      }
