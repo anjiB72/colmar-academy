@@ -1,4 +1,7 @@
 /*MAIN STYLING*/
+.border{
+  border: 1px solid black;
+}
 html {
   font-size: 16px;
 }
@@ -54,7 +57,8 @@ body {
     }
 
 /* HEADER */
-.header {
+#header {
+  width: 100%;
   border-bottom: 1px solid rgba(63, 64, 63, 1);
   position: fixed;
   top: 0;
@@ -82,7 +86,7 @@ body {
       color: rgba(63, 64, 63, 1);
     }
 
-.header h1::after {
+#header h1::after {
   content: "ACADEMY";
   font-family: "Noto", serif;
   color: rgba(226, 192, 68, 1);
@@ -116,7 +120,7 @@ body {
       .menu-main{
         display: none;
       }
-      .header h1{
+      #header h1{
         display: none;
       }
       nav{
@@ -147,13 +151,14 @@ body {
     margin: 2rem 1.5rem;
   }
     .large-image img {
-      width: 100%;
+    width: 100%;
+
     }
 
   .learn .text {
       width: 40%;
       height: auto;
-      margin: 2rem 1.5rem 2rem 0;
+      margin: 2rem 0 2rem 0;
     }
       .learn h1,
       .learn h2 {
@@ -208,7 +213,10 @@ body {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        padding: 1rem;
+        padding: 1rem 0;
+      }
+      .orientation img, .campus img, .guest img{
+        margin-left: 1rem;
       }
       .guest{
         background-color: rgba(210, 204, 161, 0.4);
@@ -217,13 +225,12 @@ body {
         width: 35%;
       }
       .info-text {
-        width: 55%;
-        margin: 1rem;
+        width: 65%;
+        margin: 1rem 0 1rem 1rem;
       }
         .info-text h4,
         .info-text p {
           padding-bottom: 1rem;
-          padding-right: 1rem;
         }
         .info-text p:last-child{
           font-style: italic;
@@ -250,6 +257,91 @@ body {
           background-color: transparent;
         }
       }
+/*COURSES*/
+  #courses {
+    background-color: rgba(226, 192, 68, 0.2);
+  }
+  #courses h3 {
+    text-align: center;
+    font-weight: 700;
+    padding-top: 2rem;
+  }
+  .courses{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem 4.5rem 0 4.5rem;
+    justify-content: space-around;
+  }
+  .course-container{
+    padding-bottom: 1.5rem;
+    width: 28%;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgba(246, 246, 246, 1);
+  }
+  .course-container img{
+    width: 100%;
+    height: auto;
+    }
+  .course-container p{
+    text-align: justify;
+    word-wrap: normal;
+  }
+/*THESIS*/
+
+.thesis h2 {
+  padding: 2rem 0;
+  text-align: center;
+  font-weight: 700;
+}
+#thesis{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.video {
+  width: 60%;
+  padding: 0 1.5rem;
+}
+
+.video video{
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.video h4{
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.video p {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.thesis-content {
+  width: 40%;
+}
+
+.thesis-content img {
+  width: 35%;
+  height: 35%;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 /*FOOTER*/
   .footer {
