@@ -5,51 +5,42 @@
 html {
   font-size: 16px;
 }
-
 body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
   }
-
   .main-container {
     width: 100%;
     margin: 0;
   }
-
   .flex {
     display: flex;
   }
-
   .text {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
   }
-
     h1 {
       font-size: 2.5rem;
       line-height: 1.4;
       font-weight: 700;
     }
-
     h2{
       font-size: 2rem;
       line-height: 1.3;
       font-weight: 500;
     }
-
     h3{
       font-size: 1.6rem;
       line-height: 1.2;
       font-weight: 600;
     }
-
     h4{
       font-size: 1.25rem;
       line-height: 1.2;
       font-weight: 600;
     }
-
     P{
       font-size: 0.9rem;
       line-height: 1.2;
@@ -57,7 +48,7 @@ body {
     }
 
 /* HEADER */
-#header {
+header {
   width: 100%;
   border-bottom: 1px solid rgba(63, 64, 63, 1);
   position: fixed;
@@ -69,29 +60,27 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
-  #logo {
-    align-items: center;
-    margin: 0 0 0 1.5rem;
-  }
-    #logo img{
-      height: 3rem;
-      margin: 0 0.25rem 0 0 ;
+    #logo {
+      align-items: center;
+      margin: 0 0 0 1.5rem;
     }
-    #logo h1{
-      margin: 0;
-      font-family: "Noto", serif;
-      font-weight: bold;
-      font-size: 2rem;
-      color: rgba(63, 64, 63, 1);
-    }
-
-#header h1::after {
-  content: "ACADEMY";
-  font-family: "Noto", serif;
-  color: rgba(226, 192, 68, 1);
-  font-size: 2rem;
-}
+      #logo img{
+        height: 3rem;
+        margin: 0 0.25rem 0 0 ;
+      }
+      #logo h1{
+        margin: 0;
+        font-family: "Noto", serif;
+        font-weight: bold;
+        font-size: 2rem;
+        color: rgba(63, 64, 63, 1);
+      }
+          #logo h1::after {
+            content: "ACADEMY";
+            font-family: "Noto", serif;
+            color: rgba(226, 192, 68, 1);
+            font-size: 2rem;
+          }
 
   /*NAV BAR*/
   nav {
@@ -120,7 +109,7 @@ body {
       .menu-main{
         display: none;
       }
-      #header h1{
+      #logo h1{
         display: none;
       }
       nav{
@@ -138,7 +127,7 @@ body {
         }
     }
 
-/*LEARN SOMETHING NEW CONTENT*/
+/*LEARN */
 .learn{
   background-color: rgba(210, 204, 161, 0.6);
   margin-top: 4rem;
@@ -152,7 +141,6 @@ body {
   }
     .large-image img {
     width: 100%;
-
     }
 
   .learn .text {
@@ -165,29 +153,66 @@ body {
         margin-bottom: 1.5rem;
       }
 
-    .learn .text .button{
+      .button{
         width: 75%;
         background-color: rgba(63, 64, 63, 1);
         padding: 0.5rem;
         color: rgba(246, 246, 246, 1);
         text-align: center;
-        text-decoration: none;
-      }
+        border-radius: 2px;
+        }
+        .button a{
+          text-decoration: none;
+          color: rgba(246, 246, 246, 1);
+        }
+
       /*CHANGE BUTTON & TEXT COLOUR WHEN HOVER*/
-      .learn .text .button:hover{
+     .button:hover{
           background-color: rgba(226, 192, 68, 1);
+          transition: color 250ms;
+        }
+        .button a:hover{
           color: rgba(63, 64, 63, 1);
           transition: color 250ms;
         }
+    /*MEDIA QUERIES FOR LEARN */
+        @media only screen and (max-width: 899px) {
+          .learn {
+            flex-direction: column;
+            }
+            .learn .large-image{
+              width: 100%;
+              margin: 0;
+              padding: 0;
+            }
+            #learn .text{
+                width: 100%;
+                padding: 0;
+                margin: 0;
+              }
+              .learn h1{
+                margin: 2rem 1rem;
+                font-size: 2rem;
+              }
+              .learn h2{
+                margin: 0 1rem 1.125rem 1rem;
+                font-size: 1.75rem;
+              }
+             .button{
+                width: 94%;
+                margin: 0 1rem 2rem 1rem;
+                padding: 0.5rem 0;
+              }
+        }
 
-/*PRACTICE CONTENT*/
+/*PRACTICE */
   .practice {
     flex-direction: row;
     justify-content: flex-start;
   }
     .practice .text {
       width: 100%;
-      padding-right: 1rem;
+      margin-right: 1rem;
       }
       .practice .text h1{
         margin: 2rem 0 0 0;
@@ -201,13 +226,18 @@ body {
         font-size: 0.75rem;
       }
 
-  .practice-col2{
-    margin: 1rem 0 2rem 0;
-    flex-direction: column;
-    width: 40%;
-    border-left: 0.5px solid rgba(63, 64, 63, 0.25);
-  }
+      .practice-col2{
+      flex-direction: column;
+      width: 40%;
+      border-left: 0.5px solid rgba(63, 64, 63, 0.5);
+      }
 
+      .orientation{
+        margin: 1rem 0 0 0;
+      }
+      .guest {
+        margin: 0 0 2rem 0;
+      }
       .orientation, .campus, .guest {
         width: 100%;
         flex-direction: row;
@@ -235,6 +265,13 @@ body {
         .info-text p:last-child{
           font-style: italic;
         }
+        .info-text a{
+          text-decoration: none;
+          color: black;
+        }
+        .info-text a:hover{
+          color: rgba(226, 192, 68, 1);
+        }
 
       /*MEDIA QUERIES FOR PRACTICE CONTENT*/
       @media only screen and (min-width: 900px){
@@ -258,37 +295,57 @@ body {
         }
       }
 /*COURSES*/
-  #courses {
+  #course {
     background-color: rgba(226, 192, 68, 0.2);
   }
-  #courses h3 {
+  #course h2 {
     text-align: center;
     font-weight: 700;
-    padding-top: 2rem;
+    margin-top: 2rem;
   }
   .courses{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2rem 4.5rem 0 4.5rem;
-    justify-content: space-around;
+    justify-content: center;
   }
   .course-container{
     padding-bottom: 1.5rem;
-    width: 28%;
+    max-width: 30%;
     margin-right: 2rem;
     margin-bottom: 2rem;
     background-color: rgba(246, 246, 246, 1);
   }
-  .course-container img{
+    .course-container img{
     width: 100%;
     height: auto;
+    padding-bottom: 1.125rem;
     }
-  .course-container p{
-    text-align: justify;
-    word-wrap: normal;
-  }
+    .course-container p{
+      text-align: justify;
+      word-wrap: normal;
+      margin: 0.5rem 3rem 0 1.125rem;
+    }
+    .course-container h6{
+      font-weight: 200;
+      margin: 0.5rem 3rem 0 1.125rem;
+    }
+    .course-container h4{
+      margin: 0 3rem 0 1.125rem;
+    }
+
+/*MEDIA QUERIES FOR COURSE CONTENT*/
+    @media only screen and (max-width: 1165px){
+      .course-container{
+        max-width: 28%;
+      }
+    }
+
 /*THESIS*/
+.thesis {
+  background-color: rgba(246, 246, 246, 1);
+}
 
 .thesis h2 {
   padding: 2rem 0;
@@ -330,18 +387,29 @@ body {
   width: 35%;
   height: 35%;
 }
-
+#fisma{
+  background-color: rgba(226, 192, 68, 0.3);
+}
 .flex-row{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
+.flex-row img{
+  padding: 1rem 1rem;
+}
 .flex-col{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+  .flex-col h4{
+    margin-bottom: 1rem;
+  }
+  .flex-col p{
+    margin-right: 2rem;
+  }
 
 /*FOOTER*/
   .footer {
@@ -351,7 +419,9 @@ body {
     margin: 0;
     color: rgba(246, 246, 246, 1);
   }
-
+    .footer span{
+      font-size: 1rem;
+    }
     .copyright,
     .terms {
       margin: 1rem 1.5rem;
