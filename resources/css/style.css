@@ -280,11 +280,34 @@ header {
         }
       }
       @media only screen and (max-width: 899px){
-        #practice-col-1 {
+      #practice-col-1 {
           display: none;
+          width: 0;
         }
         .full-display {
           display: none;
+          width: 0;
+        }
+       .test {
+         width: 100%;
+       }
+       .mobile-display{
+        padding: 0;
+        margin: 0 1rem;
+        }
+        .mobile-display img{
+          width: 100%;
+          margin: auto;
+        }
+        .practice-col2{
+          flex-direction: column;
+          width: 100%;
+          margin: 0;
+          padding: 1rem 0 0 0;
+        }
+        .info-text {
+          width: 100%;
+          margin: 1rem 2.5rem;
         }
         .orientation, .campus, .guest {
           width: 100%;
