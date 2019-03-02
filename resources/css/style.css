@@ -467,15 +467,15 @@ header {
         padding: 0;
         margin: 0;
       }
-    .video h4,
-    .video p,
-    .thesis-content,
-    #fisma,
-    #now-then{
-      display: none;
-      margin: 0;
-      padding: 0;
-    }
+      .video h4,
+      .video p,
+      .thesis-content,
+      #fisma,
+      #now-then{
+        display: none;
+        margin: 0;
+        padding: 0;
+      }
 }
 
 /*FOOTER*/
@@ -499,3 +499,10 @@ header {
       }
 
       /*MEDIA QUERIES FOR FOOTER*/
+      
+      @media only screen and (max-width: 490px){
+        .terms {
+          display: none;
+          margin: 0;
+        }
+      }
