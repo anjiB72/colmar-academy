@@ -285,6 +285,10 @@ header {
         .info-text p{
         padding-bottom: 0.5rem;
         }
+
+        .guest .info-text h4::before{
+          content: "Our ";
+        }
         .info-text p:last-child{
           font-style: italic;
         }
@@ -337,6 +341,9 @@ header {
         .info-text p{
           padding-bottom: 1rem;
         }
+        .guest .info-text h4::before{
+          content: "Special ";
+        }
         .orientation, .campus, .guest {
           width: 100%;
           flex-direction: column;
@@ -352,27 +359,26 @@ header {
 /*COURSES*/
   #course {
     background-color: rgba(226, 192, 68, 0.2);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
   #course h2 {
     text-align: center;
     font-weight: 700;
-    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
   .courses .flex-row {
-    margin: 2rem 4.5rem;
+    margin: 1rem 4.5rem;
     }
-
     .course-container{
       width: 33.33%;
       min-height: 100%;
       padding-bottom: 1.5rem;
       background-color: rgba(246, 246, 246, 1);
     }
-
       .flex-row .course-container:nth-child(1n+2){
         margin-left: 2rem;
       }
-
         .course-img{
           margin-bottom: 1rem;
         }
@@ -395,7 +401,48 @@ header {
 
     /*MEDIA QUERIES FOR COURSE CONTENT*/
 
-
+  @media only screen and (max-width: 690px){
+    #course {
+      padding: 2rem 0;
+    }
+    #course h2 {
+      margin: 0 0 1rem 0;
+    }
+    .courses .flex-row{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-content: space-between;
+      margin: 0 1rem;
+    }
+      .course-container{
+        width: 100%;
+        margin: 0.25rem 0;
+        background-color: rgba(226, 192, 68, 1);
+        border-radius: 4px;
+        padding: 0;
+      }
+        .flex-row .course-container:nth-child(1n+2){
+          margin-left: 0;
+        }
+          .course-img{
+            display: none;
+          }
+          .course-img img{
+            display: none
+        }
+      .course-container p{
+        display: none;
+      }
+      .course-container h6{
+        display: none;
+      }
+      .course-container h4{
+        margin: 1rem 0 1.5rem 1rem;
+        text-align: left;
+        padding: 0;
+      }
+    }
 
 /*THESIS*/
 .thesis {
