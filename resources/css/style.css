@@ -9,7 +9,12 @@ html {
     html {
       font-size: 14px;
     }
-}
+  }
+  @media only screen and (min-width: 1600px){
+    html{
+      font-size: 19px;
+    }
+  }
 
 body {
   margin: 0;
@@ -32,10 +37,7 @@ body {
     flex-direction: column;
     justify-content: center;
   }
-
   .text {
-    flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
   }
     h1 {
@@ -63,6 +65,9 @@ body {
       line-height: 1.2;
       font-weight: 400;
     }
+    span {
+      font-size: 1rem;
+    }
 
 /* HEADER */
 header {
@@ -82,17 +87,17 @@ header {
       margin: 0 0 0 1.5rem;
     }
       #logo img{
-        height: 3rem;
+        height: 2rem;
         margin: auto 0.25rem auto 0 ;
       }
-      #logo h1{
+      #logo h2{
         margin: 0;
         font-family: "Noto", serif;
         font-weight: bold;
         font-size: 2rem;
         color: rgba(63, 64, 63, 1);
       }
-          #logo h1::after {
+          #logo h2::after {
             content: "ACADEMY";
             font-family: "Noto", serif;
             color: rgba(226, 192, 68, 1);
@@ -129,7 +134,7 @@ header {
       .menu-main{
         display: none;
       }
-      #logo h1{
+      #logo h2{
         display: none;
       }
       nav{
@@ -144,19 +149,26 @@ header {
           align-self: center;
         }
         .menu-mobile img{
-          height: 3rem;
+          height: 2rem;
           margin: auto 0 auto 0;
         }
+    }
+    /*SCREEN WIDTH LESS THAN 798PX*/
+    @media only screen (max-width: 798px){
+      header{
+        height: 4.57rem;
+      }
+      #logo img,
+      .menu-mobile img{
+        height: 2.23rem;
+      }
     }
 
 /*LEARN */
 .learn{
   background-color: rgba(210, 204, 161, 0.6);
   margin-top: 4rem;
-  flex-direction: row;
-  justify-content: flex-start;
-  }
-
+}
   .large-image {
     width: 60%;
     margin: 2rem 1.5rem;
@@ -174,7 +186,6 @@ header {
       .learn h2 {
         margin-bottom: 1.5rem;
       }
-
       .button{
         width: 75%;
         background-color: rgba(63, 64, 63, 1);
@@ -197,6 +208,7 @@ header {
           color: rgba(63, 64, 63, 1);
           transition: color 250ms;
         }
+
     /*MEDIA QUERIES FOR LEARN */
         @media only screen and (max-width: 899px) {
           .learn {
@@ -228,10 +240,6 @@ header {
         }
 
 /*PRACTICE */
-  .practice {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
     .practice .text {
       width: 100%;
       margin-right: 1rem;
@@ -247,42 +255,35 @@ header {
         font-style: italic;
         font-size: 0.75rem;
       }
-
-      .practice-col2{
-      flex-direction: column;
+    .practice-col2{
+      justify-content: flex-start;
       width: 40%;
       border-left: 0.5px solid rgba(63, 64, 63, 0.5);
-      }
-
-      .orientation{
-        margin: 1rem 0 0 0;
-      }
-      .guest {
-        margin: 0 0 2rem 0;
-      }
-      .orientation, .campus, .guest {
+      padding-top: 1rem;
+    }
+    .orientation, .campus, .guest {
         width: 100%;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 1rem 0;
+    }
+      .desktop-pic{
+        width: 35%;
+        margin: 1rem 0 1rem 1rem;
       }
-      .orientation img, .campus img, .guest img{
-        margin-left: 1rem;
+      .desktop-pic img{
+        width: 100%;
+        height: auto;
       }
       .guest{
         background-color: rgba(210, 204, 161, 0.4);
       }
-      .full-display {
-        width: 35%;
+      .mobile-container{
+        width: 65%;
       }
       .info-text {
-        width: 65%;
-        margin: 1rem 0 1rem 1rem;
+        margin: 1rem 1rem;
       }
         .info-text h4,
-        .info-text p {
-          padding-bottom: 1rem;
+        .info-text p{
+        padding-bottom: 0.5rem;
         }
         .info-text p:last-child{
           font-style: italic;
@@ -310,7 +311,10 @@ header {
           display: none;
           width: 0;
         }
-       .test {
+        .desktop-pic{
+          display: none;
+        }
+      .mobile-container{
          width: 100%;
        }
        .mobile-display{
@@ -328,7 +332,10 @@ header {
           padding: 1rem 0 0 0;
         }
         .info-text {
-          margin: 1rem 2.5rem;
+          margin: 1rem 2.5rem 0 1rem;
+        }
+        .info-text p{
+          padding-bottom: 1rem;
         }
         .orientation, .campus, .guest {
           width: 100%;
@@ -336,6 +343,10 @@ header {
         }
         .guest{
           background-color: transparent;
+        }
+        .campus,
+        .guest {
+          margin-top: 1rem;
         }
       }
 /*COURSES*/
@@ -479,6 +490,7 @@ header {
 }
 
 /*FOOTER*/
+
   .footer {
     background-color: rgba(63, 64, 63, 1);
     flex-direction: row;
@@ -499,7 +511,7 @@ header {
       }
 
       /*MEDIA QUERIES FOR FOOTER*/
-      
+
       @media only screen and (max-width: 490px){
         .terms {
           display: none;
