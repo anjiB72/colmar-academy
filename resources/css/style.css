@@ -1,313 +1,314 @@
 /*MAIN STYLING*/
-.border{
-  border: 1px solid black;
-}
-html {
-  font-size: 16px;
-}
-  @media only screen and (max-width: 789px) {
-    html {
-      font-size: 14px;
-    }
-  }
-  @media only screen and (min-width: 1600px){
-    html{
-      font-size: 19px;
-    }
+
+  /*SETS DEFAULT FONT SIZE ACROSS DOCUMENT*/
+  html {
+    font-size: 16px;
   }
 
-body {
-  margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  /*STANDARD STYLING THROUGHOUT PAGE*/
+  * {
+    box-sizing: border-box;
   }
-  .main-container {
-    width: 100%;
+  body {
     margin: 0;
-  }
-  .flex {
-    display: flex;
-  }
-  .flex-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .flex-col{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .text {
-    align-items: flex-start;
-  }
-    h1 {
-      font-size: 2.5rem;
-      line-height: 1.4;
-      font-weight: 700;
+    font-family: 'Noto Sans KR', sans-serif;
     }
-    h2{
-      font-size: 2rem;
-      line-height: 1.3;
-      font-weight: 500;
+    .main-container {
+      width: 100%;
+      margin: 0;
     }
-    h3{
-      font-size: 1.6rem;
-      line-height: 1.2;
-      font-weight: 600;
+    .flex-row{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
     }
-    h4{
-      font-size: 1.25rem;
-      line-height: 1.2;
-      font-weight: 600;
+    .flex-col{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    P{
-      font-size: 0.9rem;
-      line-height: 1.2;
-      font-weight: 400;
-    }
-    span {
-      font-size: 1rem;
-    }
-
-/* HEADER */
-header {
-  width: 100%;
-  border-bottom: 1.5px solid rgba(63, 64, 63, 1);
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  background-color: rgba(60, 110, 113, 1);
-  height: 4rem;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-    #logo {
-      align-items: center;
-      margin: 0 0 0 1.5rem;
-    }
-      #logo img{
-        height: 2rem;
-        margin: auto 0.25rem auto 0 ;
+      h1 {
+        font-size: 2.5rem;
+        line-height: 1.4;
+        font-weight: 700;
       }
-      #logo h2{
-        margin: 0;
-        font-family: "Noto", serif;
-        font-weight: bold;
+      h2{
         font-size: 2rem;
-        color: rgba(63, 64, 63, 1);
+        line-height: 1.3;
+        font-weight: 700;
       }
-          #logo h2::after {
-            content: "ACADEMY";
-            font-family: "Noto", serif;
-            color: rgba(226, 192, 68, 1);
-            font-size: 2rem;
-          }
+      h3{
+        font-size: 1.6rem;
+        line-height: 1.2;
+        font-weight: 600;
+      }
+      h4{
+        font-size: 1.25rem;
+        line-height: 1.2;
+        font-weight: 600;
+      }
+      P{
+        font-size: 0.9rem;
+        line-height: 1.2;
+        font-weight: 400;
+      }
+      span {
+        font-size: 1rem;
+      }
 
-  /*NAV BAR*/
-  nav {
-    flex-direction: row;
-    margin: auto 1.5rem auto 0;
-  }
-    nav ul li{
-      display: inline;
-      text-decoration: none;
-    }
-    nav a{
-      text-decoration: none;
-      color: rgba(246, 246, 246, 1);
-      padding-left: 1rem;
-    }
-    .menu-main span{
-      font-size: 1rem;
-    }
-
-  /*MEDIA QUERIES FOR NAV BAR*/
-    /*SCREEN 900PX OR MORE*/
-    @media only screen and (min-width: 900px){
-      .menu-mobile{
-        display: none;
-      }
-    }
-    /*SCREEN LESS THAN 900PX*/
-    @media only screen and (max-width: 899px){
-      .menu-main{
-        display: none;
-      }
-      #logo h2{
-        display: none;
-      }
-      nav{
-        width: 65%;
-      }
-        .menu-mobile{
-          width: 100%;
-          justify-content: space-between;
-          margin: auto 0 auto 0;
-        }
-        .menu-mobile span{
-          align-self: center;
-        }
-        .menu-mobile img{
-          height: 2rem;
-          margin: auto 0 auto 0;
-        }
-    }
-    /*SCREEN WIDTH LESS THAN 798PX*/
-    @media only screen (max-width: 798px){
-      header{
-        height: 4.57rem;
-      }
-      #logo img,
-      .menu-mobile img{
-        height: 2.23rem;
-      }
-    }
-
-/*LEARN */
-.learn{
-  background-color: rgba(210, 204, 161, 0.6);
-  margin-top: 4rem;
-}
-  .large-image {
-    width: 60%;
-    margin: 2rem 1.5rem;
-  }
-    .large-image img {
+  /* HEADER */
+  #header {
     width: 100%;
-    }
-
-  .learn .text {
-      width: 40%;
-      height: auto;
-      margin: 2rem 0 2rem 0;
-    }
-      .learn h1,
-      .learn h2 {
-        margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(63, 64, 63, 0.8);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(60, 110, 113, 1);
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+      /*LOGO AND NAME*/
+      #logo {
+        align-items: center;
+        margin: 0 0 0 1.5rem;
       }
-      .button{
-        width: 75%;
-        background-color: rgba(63, 64, 63, 1);
-        padding: 0.5rem;
-        color: rgba(246, 246, 246, 1);
-        text-align: center;
-        border-radius: 2px;
+        #logo img{
+          height: 2rem;
+          margin: auto 0.25rem auto 0 ;
         }
-        .button a{
-          text-decoration: none;
+        #logo h2{
+          margin: 0;
+          font-family: "Noto Serif", serif;
+          font-weight: 900;
+          font-size: 2rem;
           color: rgba(246, 246, 246, 1);
         }
-
-      /*CHANGE BUTTON & TEXT COLOUR WHEN HOVER*/
-     .button:hover{
-          background-color: rgba(226, 192, 68, 1);
-          transition: color 250ms;
-        }
-        .button a:hover{
-          color: rgba(63, 64, 63, 1);
-          transition: color 250ms;
-        }
-
-    /*MEDIA QUERIES FOR LEARN */
-        @media only screen and (max-width: 899px) {
-          .learn {
-            flex-direction: column;
+            #logo h2::after {
+              content: "ACADEMY";
+              font-family: "Noto Serif", serif;
+              color: rgba(226, 192, 68, 1);
+              font-size: 2rem;
             }
-            .learn .large-image{
-              width: 100%;
-              margin: 0;
-              padding: 0;
-            }
-            #learn .text{
+
+    /*NAV BAR*/
+    #nav {
+      margin: auto 1.5rem auto 0;
+    }
+      #nav ul li{
+        display: inline;
+        text-decoration: none;
+      }
+      #nav a{
+        text-decoration: none;
+        color: rgba(246, 246, 246, 1);
+        padding-left: 1rem;
+      }
+      /*TEXT MENU FOR DESKTOP*/
+      .menu-main span{
+        font-size: 1rem;
+      }
+
+    /*MEDIA QUERIES FOR NAV BAR*/
+      /*SCREEN 900PX OR MORE*/
+      /*HIDE ICON MENU*/
+      @media only screen and (min-width: 900px){
+        #menu-mobile{
+          display: none;
+        }
+      }
+      /*SCREEN LESS THAN 900PX*/
+
+      @media only screen and (max-width: 899px){
+        #header {
+          background-color: rgba(60, 110, 113, 1);
+        }
+        .menu-main{
+          display: none;
+        }
+        #logo h2{
+          display: none;
+        }
+        #nav{
+          width: 65%;
+        }
+          #menu-mobile{
+            width: 100%;
+            justify-content: space-between;
+            margin: auto 0 auto 0;
+          }
+          #menu-mobile span{
+            align-self: center;
+            height: auto;
+          }
+          #menu-mobile img{
+            height: 2rem;
+            margin: auto 0 auto 0;
+          }
+      }
+
+  /*LEARN */
+  #learn{
+    background-color: rgba(210, 204, 161, 0.6);
+    margin-top: 4rem;
+  }
+    .large-image {
+      width: 60%;
+      margin: 0;
+    }
+      .large-image img {
+        width: 100%;
+        padding: 2rem 1.5rem;
+      }
+
+    #learn .text {
+        width: 40%;
+        height: auto;
+        margin: 2rem 0;
+      }
+        #learn h2,
+        #learn h3 {
+          margin-bottom: 1.5rem;
+          margin-right: 2rem;
+        }
+        #learn h3{
+          font-weight: 500;
+        }
+        #learn .button{
+          width: 77%;
+          background-color: rgba(63, 64, 63, 1);
+          padding: 0.75rem;
+          color: rgba(246, 246, 246, 1);
+          text-align: center;
+          border-radius: 2px;
+          }
+          #learn .button a{
+            text-decoration: none;
+            color: rgba(246, 246, 246, 1);
+          }
+          #learn .button h4{
+            margin: 0;
+            font-weight: 400;
+          }
+
+        /*CHANGE BUTTON & TEXT COLOUR WHEN HOVER*/
+       #learn .button:hover{
+            background-color: rgba(226, 192, 68, 1);
+            transition: color 250ms;
+          }
+        #learn .button a:hover{
+            color: rgba(63, 64, 63, 1);
+            transition: color 250ms;
+          }
+
+      /*MEDIA QUERIES FOR LEARN */
+          @media only screen and (max-width: 899px) {
+            #learn {
+              flex-direction: column;
+              }
+              #learn .large-image{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+              }
+              #learn .large-image img {
                 width: 100%;
                 padding: 0;
+              }
+              #learn .text{
+                box-sizing: content-box;
+                width: 100%;
+                height: auto;
+                padding-bottom: 2rem;
                 margin: 0;
               }
-              .learn h1{
-                margin: 2rem 1rem;
-                font-size: 2rem;
+                #learn h2{
+                  margin: 2rem 1rem;
+                }
+                #learn h3{
+                  margin: 0 1rem 1.125rem 1rem;
+                }
+                 #learn .button{
+                    width: auto;
+                    padding: 1rem 0 1.5rem 0;
+                    margin: 0 1rem;
+                  }
               }
-              .learn h2{
-                margin: 0 1rem 1.125rem 1rem;
-                font-size: 1.75rem;
-              }
-             .button{
-                width: 94%;
-                margin: 0 1rem 2rem 1rem;
-                padding: 0.5rem 0;
-              }
-        }
 
 /*PRACTICE */
-    .practice .text {
+    #practice-col-1,
+    #practice-col-2 {
+      padding-bottom: 2rem;
+    }
+    #practice .text {
       width: 100%;
-      margin-right: 1rem;
+      margin: 0;
       }
-      .practice .text h1{
-        margin: 2rem 0 0 0;
+      #practice .text h2{
+        margin: 0 1.5rem;
         text-align: left;
       }
-      .practice .text p {
-        margin-top: 1.5rem;
+      #practice .text p {
+        margin: 1.5rem 1.5rem;
       }
-      .practice .text p:last-child{
+      #practice .text p:last-child{
         font-style: italic;
         font-size: 0.75rem;
+        margin-bottom: 0;
       }
-    .practice-col2{
-      justify-content: flex-start;
-      width: 40%;
-      border-left: 0.5px solid rgba(63, 64, 63, 0.5);
-      padding-top: 1rem;
-    }
-    .orientation, .campus, .guest {
-        width: 100%;
-    }
-      .desktop-pic{
-        width: 35%;
-        margin: 1rem 0 1rem 1rem;
+      #practice-col-2{
+        justify-content: flex-start;
+        width: 40%;
+        border-left: 0.5px solid rgba(63, 64, 63, 0.5);
+        padding-top: 1rem;
       }
-      .desktop-pic img{
-        width: 100%;
-        height: auto;
+      #practice-col-2 .flex-row {
+          width: 100%;
       }
-      .guest{
-        background-color: rgba(210, 204, 161, 0.4);
-      }
-      .mobile-container{
-        width: 65%;
-      }
-      .info-text {
-        margin: 1rem 1rem;
-      }
-        .info-text h4,
-        .info-text p{
-        padding-bottom: 0.5rem;
+        .desktop-pic{
+          width: 35%;
+          margin: 1rem 0 1rem 1rem;
         }
+        .desktop-pic img{
+          width: 100%;
+          height: auto;
+        }
+        #guest{
+          background-color: rgba(210, 204, 161, 0.4);
+        }
+        #practice-col-2 .flex-col{
+          width: 65%;
+        }
+        .info-text {
+          margin: 1rem 1rem;
+        }
+          .info-text h4,
+          .info-text p{
+          padding-bottom: 0.5rem;
+          }
 
-        .guest .info-text h4::before{
-          content: "Our ";
-        }
-        .info-text p:last-child{
-          font-style: italic;
-        }
-        .info-text a{
-          text-decoration: none;
-          color: black;
-        }
-        .info-text a:hover{
-          color: rgba(226, 192, 68, 1);
-        }
+          #guest .info-text h4::before{
+            content: "Our ";
+          }
+          .info-text p:last-child{
+            font-style: italic;
+          }
+          .info-text a{
+            text-decoration: none;
+            color: black;
+          }
+          .info-text a:hover{
+            color: rgba(226, 192, 68, 1);
+          }
 
       /*MEDIA QUERIES FOR PRACTICE CONTENT*/
-      @media only screen and (min-width: 900px){
+      @media only screen and (min-width: 769px){
         .mobile-display {
           display: none;
         }
       }
-      @media only screen and (max-width: 899px){
-      #practice-col-1 {
+      @media only screen and (max-width: 768px){
+      #practice-col-1{
           display: none;
           width: 0;
         }
@@ -318,58 +319,65 @@ header {
         .desktop-pic{
           display: none;
         }
-      .mobile-container{
-         width: 100%;
-       }
+        #practice-col-2{
+          flex-direction: column;
+          width: 100%;
+          margin: 0;
+          padding: 1rem 1rem 2rem 1rem;
+          border: none;
+        }
+        #practice-col-2 .flex-col{
+          width: 100%;
+        }
        .mobile-display{
         padding: 0;
-        margin: 0 1rem;
+        margin: 0;
         }
         .mobile-display img{
           width: 100%;
           margin: auto;
         }
-        .practice-col2{
-          flex-direction: column;
-          width: 100%;
-          margin: 0;
-          padding: 1rem 0 0 0;
-        }
         .info-text {
-          margin: 1rem 2.5rem 0 2.5rem;
+          margin: 1rem 2rem 0 2rem;
         }
         .info-text p{
           padding-bottom: 1rem;
         }
-        .guest .info-text h4::before{
-          content: "Special ";
+        .info-text a p{
+          padding: 0;
         }
-        .orientation, .campus, .guest {
+        #guest .info-text h4::before{
+          content: "Special ";
+          font-size: 1.25rem;
+        }
+        #practice-col-2 .flex-row{
           width: 100%;
           flex-direction: column;
         }
-        .guest{
+        #guest{
           background-color: transparent;
         }
-        .campus,
-        .guest {
-          margin-top: 1rem;
+        #campus,
+        #guest {
+          margin-top: 4rem;
         }
       }
 /*COURSES*/
   #course {
-    background-color: rgba(226, 192, 68, 0.2);
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    background-color: rgba(226, 192, 68, 0.3);
+    padding: 2rem 0;
   }
   #course h2 {
     text-align: center;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .courses .flex-row {
-    margin: 1rem 4.5rem;
+    margin: 0 4.5rem;
     }
+  .courses .flex-row:first-child{
+    margin-bottom: 2rem;
+  }
     .course-container{
       width: 33.33%;
       min-height: 100%;
@@ -389,163 +397,160 @@ header {
     .course-container p{
       text-align: left;
       word-wrap: normal;
-      margin: 0.5rem 3rem 0 1.125rem;
+      margin: 0.5rem 3rem 0 1rem;
     }
     .course-container h6{
       font-weight: 200;
-      margin: 0.5rem 3rem 0 1.125rem;
+      margin: 0.5rem 3rem 0 1rem;
     }
     .course-container h4{
-      margin: 0 3rem 0 1.125rem;
+      margin: 0 3rem 0 1rem;
     }
 
     /*MEDIA QUERIES FOR COURSE CONTENT*/
-
-  @media only screen and (max-width: 690px){
-    #course {
-      padding: 2rem 0;
-    }
-    #course h2 {
-      margin: 0 0 1rem 0;
-    }
-    .courses .flex-row{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-content: space-between;
-      margin: 0 1rem;
-    }
-      .course-container{
-        width: 100%;
-        margin: 0.25rem 0;
-        background-color: rgba(226, 192, 68, 1);
-        border-radius: 4px;
-        padding: 0;
-      }
-        .flex-row .course-container:nth-child(1n+2){
-          margin-left: 0;
+      @media only screen and (max-width: 760px){
+        #course {
+          padding: 2rem 0;
         }
-          .course-img{
+        #course h2 {
+          margin: 0 0 1rem 0;
+        }
+        .courses .flex-row:first-child{
+          margin-bottom: 0;
+        }
+        .courses .flex-row{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-content: space-between;
+          margin: 0 1rem;
+        }
+          .course-container{
+            width: 100%;
+            margin: 0.25rem 0;
+            background-color: rgba(226, 192, 68, 1);
+            border-radius: 4px;
+            padding: 0;
+          }
+            #courses-1 .course-container:first-child{
+              margin-top: 0;
+            }
+            #courses-2 .course-container:last-child{
+              margin-bottom: 0;
+            }
+            .flex-row .course-container:nth-child(1n+2){
+              margin-left: 0;
+            }
+              .course-img{
+                display: none;
+              }
+              .course-img img{
+                display: none
+            }
+          .course-container p{
             display: none;
           }
-          .course-img img{
-            display: none
+          .course-container h6{
+            display: none;
+          }
+          .course-container h4{
+            margin: 1rem 0 1.5rem 1rem;
+            text-align: left;
+            padding: 0;
+          }
         }
-      .course-container p{
-        display: none;
-      }
-      .course-container h6{
-        display: none;
-      }
-      .course-container h4{
-        margin: 1rem 0 1.5rem 1rem;
-        text-align: left;
-        padding: 0;
-      }
-    }
 
-/*THESIS*/
-.thesis {
-  width: 100%;
-  background-color: rgba(246, 246, 246, 1);
-}
+  /*THESIS*/
   #thesis {
-    padding: 2rem 0;
-    text-align: center;
-    font-weight: 700;
+    background-color: rgba(246, 246, 246, 1);
   }
-
-.video {
-  width: 60%;
-  padding: 0 1.5rem;
-}
-  .video video{
-    width: 100%;
-    height: auto;
-    margin-bottom: 1.5rem;
-  }
-  .video h4{
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-  .video p {
-    width: 100%;
-    margin-bottom: 2rem;
-    text-align: justify;
-  }
-
-.thesis-content {
-  width: 40%;
-}
-  .thesis-img{
-    width: 35%;
-    padding: 0;
-    margin: 1rem;
-  }
-    .thesis-img img{
-      width: 100%;
-      margin: 0;
-      padding: 0;
+    #thesis h2 {
+      padding: 2rem 0;
+      text-align: center;
+      font-weight: 700;
     }
-#fisma{
-  background-color: rgba(226, 192, 68, 0.3);
-}
-.thesis-text{
-  width: 60%;
-  margin-right: 1rem;
-}
-  .thesis-text h4 {
-    margin-bottom: 1rem;
-  }
-
-  /*MEDIA QUERIES FOR THESIS CONTENT*/
-
-  @media only screen and (max-width: 700px){
-    .thesis {
-      width: 100%;
-      background-color: rgba(246, 246, 246, 1);
-    }
-      #thesis {
-        padding: 2rem 0 1rem 0;
-        text-align: center;
-        font-weight: 700;
-      }
-      #thesis::after{
-        content:"s";
-        color: black;
-        font-weigth: 700;
-      }
-
+    /*VIDEO CONTAINER AND TEXT*/
     .video {
-      width: 100%;
-      margin-bottom: 1.5rem;
-      padding: 0;
+      width: 60%;
+      margin: 0 1.5rem 1.5rem 1.5rem;
     }
       .video video{
-        padding: 0;
-        margin: 0;
+        width: 100%;
+        height: auto;
       }
-      .video h4,
-      .video p,
-      .thesis-content,
-      #fisma,
-      #now-then{
-        display: none;
-        margin: 0;
-        padding: 0;
+      .video h4{
+        width: 100%;
+        margin: 1.5rem 0 0.5rem 0;
       }
-}
+      .video p {
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: justify;
+      }
+      /*SIDE CONTENT WITH THESIS INFORMATION*/
+      .thesis-content {
+        width: 40%;
+      }
+        .thesis-img{
+          width: 35%;
+          height: auto;
+          padding: 0;
+          margin: 1rem;
+        }
+          .thesis-img img{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+          }
+          #fisma{
+            background-color: rgba(226, 192, 68, 0.3);
+          }
+          .thesis-text{
+            width: 60%;
+            margin-right: 1rem;
+          }
+            .thesis-text h4 {
+              margin-bottom: 1rem;
+            }
 
-/*FOOTER*/
+    /*MEDIA QUERIES FOR THESIS CONTENT*/
+    @media only screen and (max-width: 767px){
+      #thesis {
+        background-color: rgba(246, 246, 246, 1);
+      }
+        #thesis h2 {
+          padding: 2rem 0 1rem 0;
+        }
+        #thesis h2::after{
+          content:"s";
+          color: black;
+          font-weigth: 700;
+        }
+        .video {
+          width: 100%;
+          margin: 0 0 1.5rem 0;
+        }
+          .video video{
+            width: 100%;
+            height: auto;
+          }
+        .video h4,
+        .video p,
+        .thesis-content {
+          display: none;
+          margin: 0;
+          padding: 0;
+        }
+    }
 
-  .footer {
+  /*FOOTER*/
+  #footer {
     background-color: rgba(63, 64, 63, 1);
-    flex-direction: row;
     justify-content: space-between;
     margin: 0;
     color: rgba(246, 246, 246, 1);
   }
-    .footer span{
+    #footer span{
       font-size: 1rem;
     }
     .copyright,
@@ -558,10 +563,18 @@ header {
       }
 
       /*MEDIA QUERIES FOR FOOTER*/
-
-      @media only screen and (max-width: 490px){
-        .terms {
+      @media only screen and (max-width: 510px){
+       .terms {
           display: none;
           margin: 0;
+        }
+      }
+      @media only screen and (max-width: 345px){
+        #footer {
+          justify-content: center;
+        }
+        .copyright span{
+          display: block;
+          line-height: 1.5;
         }
       }
